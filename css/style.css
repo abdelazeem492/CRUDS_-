@@ -1,0 +1,406 @@
+:root {
+  --bodyColor: #222;
+  --textColor: #fff;
+  --mainColor: rgb(0, 149, 255);
+  --inputColor: #111;
+  --inputFocusColor: #000;
+}
+
+* {
+  font-family: "Cairo", sans-serif;
+  text-transform: capitalize;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bodyColor);
+}
+/* ----------------------------------------------------------------------------- */
+/* Start Father Section  */
+.crud-container {
+  width: 80vw;
+  margin: 0 auto;
+}
+/* End Father Section  */
+/* ----------------------------------------------------------------------------- */
+/* Start Header  */
+header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1,
+header p {
+  letter-spacing: 0.2rem;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  padding: 5px 30px;
+}
+
+header p {
+  letter-spacing: normal;
+  font-size: 22px;
+  color: var(--textColor);
+}
+
+header h1 {
+  margin-top: 20px;
+  font-size: 70px;
+  color: var(--mainColor);
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+/* End Header  */
+/* ----------------------------------------------------------------------------- */
+/* Start Input Section  */
+input {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: none;
+  background-color: var(--inputColor);
+  margin: 4px 0 !important;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 7px 15px;
+  color: var(--textColor);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  caret-color: var(--mainColor);
+  text-transform: none;
+}
+
+input:focus {
+  background-color: var(--inputFocusColor);
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.price {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  text-align: center;
+  gap: 8px;
+}
+
+#total {
+  color: var(--textColor);
+  background-color: rgb(255, 38, 14);
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin: 4px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  border: 1.5px solid var(--mainColor);
+  cursor: pointer;
+  background-color: var(--mainColor);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--textColor);
+  font-size: 20px !important;
+  letter-spacing: 1.2px;
+  margin: 8px 0 !important;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+
+button:hover {
+  background-color: transparent;
+  color: var(--mainColor);
+  letter-spacing: 2px;
+}
+/* End Input Section  */
+/* ----------------------------------------------------------------------------- */
+/* Start Output Container */
+.btnSearch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnSearch button {
+  flex-basis: 45%;
+}
+
+table {
+  min-width: 100%;
+  text-align: center;
+  margin: 20px auto !important;
+  color: var(--textColor);
+}
+
+table button {
+  width: 90px;
+  font-size: 18px !important;
+  font-weight: normal;
+  height: fit-content;
+  padding: 5px 10px;
+  letter-spacing: normal;
+  margin-right: 0 !important;
+  margin: auto;
+}
+
+table button:hover {
+  letter-spacing: 1.2px;
+}
+
+th {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 22px;
+  padding-bottom: 10px;
+  padding: 10px;
+  margin: 10px !important;
+  border-bottom: 1px solid #ddd !important;
+}
+
+td button {
+  margin: 10px auto !important;
+  width: 85px;
+  padding: 5px 8px;
+}
+
+td {
+  font-size: 18px;
+}
+
+/* End Output Container */
+/* ----------------------------------------------------------------------------- */
+@media (max-width: 970px) {
+  .crud-container {
+    width: 90%;
+    margin: auto !important;
+  }
+  table {
+    width: 90%;
+  }
+}
+@media (max-width: 850px) {
+  .crud-container {
+    width: 90%;
+  }
+  table {
+    width: 100%;
+    margin: auto;
+  }
+  th {
+    font-size: 18px !important;
+  }
+  td {
+    font-size: 16px !important;
+  }
+}
+@media (max-width: 767px) {
+  button {
+    font-size: 16px !important;
+    font-weight: normal;
+  }
+  td button {
+    width: fit-content;
+  }
+  table {
+    width: 100%;
+  }
+  th {
+    font-size: 16px !important;
+  }
+  td {
+    font-size: 14px !important;
+  }
+  #total {
+    font-size: 16px;
+  }
+}
+@media (max-width: 700px) {
+  th {
+    font-size: 16px !important;
+    padding: 5px;
+  }
+  td {
+    font-size: 14px !important;
+    padding: 5px;
+    margin: auto;
+  }
+  td button {
+    width: fit-content;
+    font-size: 16px !important;
+  }
+}
+@media (max-width: 630px) {
+  th {
+    font-size: 16px !important;
+    padding: 3px;
+  }
+  td {
+    font-size: 14px !important;
+    padding: 3px;
+    margin: auto;
+  }
+  td button {
+    width: fit-content;
+    font-size: 14px !important;
+  }
+
+  button {
+    height: 20px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 560px) {
+  th {
+    font-size: 14px !important;
+    padding: 3px;
+  }
+  td {
+    font-size: 12px !important;
+    padding: 3px;
+    margin: 5px;
+  }
+  td button {
+    width: fit-content;
+    font-size: 14px !important;
+  }
+
+  button {
+    height: 20px;
+    padding: 15px;
+  }
+  .crud-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 520px) {
+  th {
+    font-size: 13px !important;
+    padding: 2px;
+  }
+  td {
+    font-size: 13px !important;
+    padding: 2px;
+  }
+  td button {
+    margin: 3px !important;
+    width: fit-content;
+    font-size: 12px !important;
+  }
+
+  button {
+    height: 15px;
+    padding: 15px;
+  }
+  table {
+    width: 100%;
+    margin: 0px 0;
+  }
+}
+@media (max-width: 500px) {
+  th {
+    font-size: 13px !important;
+    padding: 2px;
+  }
+  td {
+    font-size: 13px !important;
+    padding: 2px;
+  }
+  td button {
+    margin: 3px !important;
+    width: fit-content;
+    font-size: 12px !important;
+  }
+
+  button {
+    font-size: 14px;
+    letter-spacing: normal;
+    height: 15px;
+    padding: 15px;
+  }
+  table {
+    width: 100%;
+    margin: 0px 0;
+  }
+}
+@media (max-width: 483px) {
+  th {
+    font-size: 12px !important;
+    padding: 1px;
+  }
+  td {
+    font-size: 12px !important;
+    padding: 1px;
+    margin: 1px;
+  }
+  td button {
+    margin: 1px !important;
+    width: fit-content;
+    font-size: 10px !important;
+    padding: 2px;
+  }
+
+  button {
+    font-size: 10px;
+    letter-spacing: normal;
+    height: 12px;
+    padding: 12px;
+  }
+  table {
+    width: 100%;
+    margin: 0px 0;
+  }
+  .crud-container {
+    width: 100%;
+    margin: auto !important;
+  }
+  .input-container {
+    width: 100vw !important;
+    margin: auto !important;
+  }
+}
+
+@media (max-width: 283px) {
+  .input-container {
+    width: 125vw !important;
+    margin: auto;
+  }
+  .crud-container {
+    width: 125vw;
+  }
+  button {
+    font-size: 12px !important;
+  }
+}
